@@ -54,6 +54,17 @@ public class InitialDataLoader implements ApplicationListener<ContextRefreshedEv
 		author3.getBooks().add(book3);
 		authorRepository.save(author3); //saved first inverse entity
 		bookRepository.save(book3);
+		
+		Book book4 = new Book("Modern Design Pattern","IT",60.77);
+		book4.getAuthors().add(author1);
+		book4.getAuthors().add(author2);
+		book4.getAuthors().add(author3);
+		
+		authorRepository.save(author1);
+		authorRepository.save(author2);
+		authorRepository.save(author3);
+		bookRepository.save(book4);
+		
 	
 	}
 
